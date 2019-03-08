@@ -1,0 +1,15 @@
+.container h2{
+    font-size:36pt ;
+    font-family: Myriad Pro;
+    color: #007bff;
+   text-align: center;
+}
+.container h2 i{
+    text-shadow: 2px 2px #666;
+}
+.hoayeu{
+    margin-top: 100px;
+}
+.hoayeu .col-lg-3 p,i,span{
+    /*display: none;*/
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Qùa Của Hoa </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+    <h2><i>Đinh Anh HOA</i></h2>
+    <form name="loginform">
+        <div class="form-group">
+            <label>TÀI KHOẢN:</label>
+            <input type="text" class="form-control" id="taikhoan" placeholder="Nhập họ và tên" name="taikhoan">
+        </div>
+        <div class="form-group">
+            <label>PASSWORD:</label>
+            <input type="password" class="form-control" id="matkhau" placeholder="Nếu không biết" name="matkhau">
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="hoangbeo()">Check</button>
+        <button type="submit" class="btn btn-primary" onclick="myFunction()" style="display: none" id="ok">Đăng Nhập</button>
+    </form>
+</div>
+<div class="container hoayeu">
+       <div class="row">
+           <div class="col-lg-3">
+               <div class="50/50">
+                   <h3>TRỢ GIÚP 50/50</h3>
+                   <button type="submit" class="btn btn-primary">Đáp Án</button>
+                   <p>Có 2 Gợi ý của Em Dành Cho C :</p>
+                   <span>1: Có trong CMT, Thẻ SV... </span><br>
+                   <span>2: 1 Năm chỉ có 1 lần</span>
+               </div>
+           </div>
+          <div class="col-lg-3">
+              <div class="hoiykien">
+                  <h3>Hỏi ý kiến Hoàng</h3>
+                  <button type="submit" class="btn btn-primary">Đáp Án</button>
+                  <p>Ý Kiến Của Hoàng là C dùng Trợ Gíup Cuối Cùng </p>
+              </div>
+          </div>
+           <div class="col-lg-3">
+               <div class="totuvantaicho">
+                   <h3>Tổ Trợ Gíup Gần Đấy</h3>
+               </div>
+           </div>
+          <div class="col-lg-3">
+              <div class="goidienthoai">
+                  <h3>NT Cho Hoàng</h3>
+                  <button type="submit" class="btn btn-primary" onclick="myFunction()">Đáp Án</button>
+                  <br>
+                  <i>NT Đi Đang Chờ Nè:</i><br>
+                  <span>100% TRUE</span>
+              </div>
+          </div>
+       </div>
+</div>
+
+
+<script>
+
+    var show=document.getElementById('ok');
+
+    // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+       function hoangbeo() {
+           var username = document.getElementById('taikhoan').value;
+           var password = document.getElementById('matkhau').value;
+           var hoa="hoang";
+           var hoang="123";
+           if ((username == hoa) && (password == hoang)){
+              alert('TRUE');
+              show.style.display="block";
+           }
+           else{
+               alert('FALSE');
+               return true;
+           }
+           return false;
+       }
+
+     function myFunction() {
+    location.replace("ngaycuahoa.html")
+     }
+</script>
+</body>
+</html>
